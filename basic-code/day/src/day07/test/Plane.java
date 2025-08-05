@@ -9,6 +9,13 @@ public class Plane {
         int m = sc.nextInt();
         int cabin = sc.nextInt();
         System.out.println(price(n,m,cabin));
+        if(m >= 5 && m <= 10){
+            price(n, m, 0.9, 0.85);
+        }else if(m >= 1 && m <= 4 || m >= 11 && m <= 12){
+            price(n, m, 0.7, 0.65);
+        }else{
+            System.out.println("月份输入不合法");
+        }
     }
 
     public static double price(double price, int month, int cabin){
